@@ -27,7 +27,7 @@ export const Login: React.FC = () => {
     if (isSuccess) {
       navigate(from, { replace: true });
     } else {
-      setErrorMessage("Sai thông tin đăng nhập! (Gợi ý: admin / 123456)");
+      setErrorMessage("Sai thông tin đăng nhập!");
     }
   };
 
