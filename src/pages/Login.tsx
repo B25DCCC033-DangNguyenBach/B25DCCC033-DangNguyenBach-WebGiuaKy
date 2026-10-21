@@ -11,7 +11,8 @@ export const Login: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = (location.state as { from?: { pathname: string } })?.from?.pathname || "/";
+  const from =
+    (location.state as { from?: { pathname: string } })?.from?.pathname || "/";
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,8 +34,7 @@ export const Login: React.FC = () => {
   return (
     <div className="login-card">
       <h2>Đăng nhập tài khoản</h2>
-      <p className="login-hint">Tài khoản mẫu: <code>admin</code> / Mật khẩu: <code>123456</code></p>
-      
+
       {errorMessage && <div className="alert alert-error">{errorMessage}</div>}
 
       <form onSubmit={handleSubmit} className="form-layout">
